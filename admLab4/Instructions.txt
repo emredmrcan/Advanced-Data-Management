@@ -1,0 +1,14 @@
+To remove files and directories
+rm -r admLab4
+rm admLab4.jar
+
+To create a jar file by using a parent directory of .java and .class files
+jar cf admLab4.jar admLab4/ 
+
+To run the implemented program. Enter all inputs and output respectively to make it work.
+spark-submit --master yarn --class admLab4.admlab4Class admLab4.jar admlab3/input/movie.csv admlab3/input/rating.csv admlab3/newoutput
+
+To see the output for sections 1,2,3. 
+hdfs dfs -cat admlab3/newoutput/part-00000
+!!You can not use the same for section 4 due to .csv format output.
+hdfs dfs -cat admlab3/newoutput/part-00000-3d764eb7-7e93-4e20-9a57-79def13fae8c-c000.csv
